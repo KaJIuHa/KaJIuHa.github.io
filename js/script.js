@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const cartContainer = document.getElementById("cart");
     const cartItems = document.getElementById("cart-items");
     const totalPrice = document.getElementById("total-price");
-    const productShow = document.getElementById(".products")
+    const productShow = document.getElementById("products")
 
     let cart = [];
     let total = 0;
@@ -92,6 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 Telegram.WebApp.onEvent('mainButtonClicked',function(){
     cartContainer.removeAttribute("hidden");
-    tg.MainButton.setText('Перейти к формлению');
+    tg.MainButton.setText('Перейти к оформлению');
     productShow.style.display = 'none';
 })
