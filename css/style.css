@@ -23,8 +23,8 @@ body {
 }
 
 .add-to-cart {
-    /* background-color: var(--tg-theme-button-color);
-    color: var(--tg-theme-button-text-color); */
+    background-color: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color);
     padding: 5px 10px;
     border: none;
     cursor: pointer;
