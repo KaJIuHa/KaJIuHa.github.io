@@ -96,4 +96,5 @@ Telegram.WebApp.onEvent('mainButtonClicked', function(){
     cartContainer.removeAttribute("hidden");
     // tg.MainButton.setText('Перейти к оформлению');
     productShow.style.display = 'none';
+    tg.sendData('Hi from bot')
 });
