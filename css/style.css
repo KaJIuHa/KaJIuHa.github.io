@@ -23,7 +23,7 @@ body {
 }
 
 .add-to-cart {
-    background-color: #4CAF50;
+    background-color: var(--tg-theme-bg-color);
     color: white;
     padding: 5px 10px;
     border: none;
