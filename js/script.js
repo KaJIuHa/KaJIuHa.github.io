@@ -90,8 +90,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-Telegram.WebApp.onEvent('mainButtonClicked',function(){
+Telegram.WebApp.onEvent('mainButtonClicked', function(){
+    tg.MainButton.setText('Перейти в корзину');
     cartContainer.removeAttribute("hidden");
-    tg.MainButton.setText('Перейти к оформлению');
+    // tg.MainButton.setText('Перейти к оформлению');
     productShow.style.display = 'none';
 })
