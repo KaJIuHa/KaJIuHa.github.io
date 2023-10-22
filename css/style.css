@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: var(--tg-theme-bg-color);
-    color: var(--tg-theme-text-color);
+    color: var(--tg-theme-text-color) ;
 }
 
 .products {
@@ -28,7 +28,6 @@ body {
     padding: 5px 10px;
     border: none;
     cursor: pointer;
-    background-color: var(--tg-theme-bg-color);
 }
 
 .cart-quantity {
