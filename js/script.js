@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let cart = [];
     let total = 0;
+    
+    let tg = window.Telegram.WebApp;
+
+    tg.expand();
 
     addToCartButtons.forEach((button, index) => {
         button.addEventListener("click", () => {
