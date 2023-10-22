@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Интернет-магазин</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+    <h1>Добро пожаловать в наш магазин</h1>
+    <div class="products">
+        <div class="product">
+            <img src="product1.jpg" alt="Товар 1">
+            <div class="product-info">
+                <h2>Товар 1</h2>
+                <p>Описание товара 1</p>
+                <p>Цена: $<span class="price">10</span></p>
+            </div>
+            <button class="add-to-cart">Добавить в корзину</button>
+            <div class="cart-quantity" hidden>0</div>
+            <div class="quantity-controls" hidden>
+                <button class="increment">+</button>
+                <button class="decrement">-</button>
+            </div>
+        </div>
+        <!-- Повторите блок с товаром для остальных товаров, обязательно добавив цену для каждого товара -->
+    </div>
+    <div class="cart" id="cart" hidden>
+        <h2>Корзина</h2>
+        <ul id="cart-items">
+            <!-- Сюда будут добавляться выбранные товары -->
+        </ul>
+        <p>Общая стоимость: $<span id="total-price">0</span></p>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
