@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let cart = [];
     let total = 0;
-    
+
     let tg = window.Telegram.WebApp;
 
     tg.expand();
@@ -42,7 +42,9 @@ document.addEventListener("DOMContentLoaded", function () {
             cart.push(product);
             total += product.price;
             updateCartDisplay();
-            cartContainer.removeAttribute("hidden");
+            // cartContainer.removeAttribute("hidden");
+            tg.MainButton.setText('Перейти в корзину');
+            tg.MainButton.show();
 
             // Обработка нажатия на кнопку плюс
             incrementButton.addEventListener("click", () => {
@@ -86,3 +88,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
