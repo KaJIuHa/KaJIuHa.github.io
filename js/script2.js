@@ -92,6 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // cartContainer.removeAttribute("hidden");
         // // tg.MainButton.setText('Перейти к оформлению');
         // productShow.style.display = 'none';
-        tg.sendData(item);
+        tg.sendData(JSON.stringify(item));
     });
 });
