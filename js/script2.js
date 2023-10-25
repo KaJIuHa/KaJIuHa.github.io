@@ -87,11 +87,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     Telegram.WebApp.onEvent('mainButtonClicked', function () {
-        tg.BackButton.show();
-        tg.MainButton.setText('Перейти в корзину');
-        cartContainer.removeAttribute("hidden");
-        // tg.MainButton.setText('Перейти к оформлению');
-        productShow.style.display = 'none';
+        // tg.BackButton.show();
+        // tg.MainButton.setText('Перейти в корзину');
+        // cartContainer.removeAttribute("hidden");
+        // // tg.MainButton.setText('Перейти к оформлению');
+        // productShow.style.display = 'none';
         tg.sendData(item);
     });
 });
