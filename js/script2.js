@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const totalPrice = document.getElementById("total-price");
 
     const items = {}; // Создаем словарь для хранения выбора пользователя
+    let tg = window.Telegram.WebApp;
+
+    tg.expand();
 
     let total = 0;
 
@@ -34,7 +37,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             total += productPrice;
             updateCartDisplay();
-            cartContainer.removeAttribute("hidden");
+            // cartContainer.removeAttribute("hidden");
+            tg.MainButton.setText('Перейти в корзину');
+            tg.MainButton.show();
+
         });
     });
 
