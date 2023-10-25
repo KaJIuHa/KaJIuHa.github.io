@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-Telegram.WebApp.onEvent('mainButtonClicked',callback, function(){
+Telegram.WebApp.onEvent('mainButtonClicked', function(){
     tg.sendData(item)
     tg.close()
     // tg.MainButton.setText('Перейти в корзину');
