@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Добавьте товары в корзину.");
             return;
         }
-        if (!product.field1 || !product.field2 || !product.field3 || !product.field4) {
+        if (!field1.value || !field2.value || !field3.value || !field4.value) {
             alert("Поля для доставки обязательны для заполнения.");
             return;
         }
