@@ -80,3 +80,22 @@ body {
     width: 150px;
     height: 150px;
 }
+
+/* Обновленный CSS для стилей полей */
+.field-pair {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.field-pair input {
+    width: 50%; /* Распределение полей по 2 в ряду */
+    border: 2px solid black; /* Черная рамка */
+    border-radius: 5px; /* Скругленные углы */
+    padding: 5px; /* Отступ вокруг текста */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* ... остальной CSS ... */
