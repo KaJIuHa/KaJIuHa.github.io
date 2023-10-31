@@ -41,10 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const product = {
                 name: productName,
                 price: productPrice,
-                field1: field1.value, // Получение значения поля 1
-                field2: field2.value, // Получение значения поля 2
-                field3: field3.value, // Получение значения поля 3
-                field4: field4.value, // Получение значения поля 4
                 quantity: 1,
             };
 
@@ -98,6 +94,13 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Поля для доставки обязательны для заполнения.");
             return;
         }
+        const delivery = {
+            field1: field1.value, // Получение значения поля 1
+            field2: field2.value, // Получение значения поля 2
+            field3: field3.value, // Получение значения поля 3
+            field4: field4.value, // Получение значения поля 4
+        }
+        item[delivery] = delivery;
         productShow.style.display = 'none';
         tg.sendData(JSON.stringify(item));
     });
