@@ -99,3 +99,9 @@ body {
 }
 
 /* ... остальной CSS ... */
+.title{
+    text-align: center;
+}
+.warning{
+    text-align: center;
+}
