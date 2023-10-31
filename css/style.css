@@ -6,6 +6,7 @@ body {
 
 .products {
     display: grid;
+    /* width: 576px; */
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
 }
@@ -23,8 +24,8 @@ body {
 }
 
 .add-to-cart {
-    background-color: var(--tg-theme-button-color);
-    color: var(--tg-theme-button-text-color);
+    /* background-color: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color); */
     padding: 5px 10px;
     border: none;
     cursor: pointer;
@@ -44,6 +45,8 @@ body {
 
 .cart-quantity.show {
     display: inline;
+    width: 30px;
+    height: inherit;
 }
 
 .quantity-controls {
@@ -53,12 +56,15 @@ body {
 
 }
 
+
 .increment,
 .decrement {
-    background-color: var(--tg-theme-button-color);
-    color: var(--tg-theme-button-text-color);
+    background-color: black;
+    color: white;
     padding: 5px 10px;
-    border: none;
+    border-style: solid;
+    border-color: aliceblue;
+    border-width: 0.3px ;
     cursor: pointer;
     border-radius: 8px;
     margin: 0 10px; /* Небольшое расстояние между кнопками */
