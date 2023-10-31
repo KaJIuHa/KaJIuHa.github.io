@@ -94,12 +94,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     Telegram.WebApp.onEvent('mainButtonClicked', function () {
-        // tg.BackButton.show();
-        // tg.MainButton.setText('Перейти в корзину');
-        // cartContainer.removeAttribute("hidden");
-        // // tg.MainButton.setText('Перейти к оформлению');
-        // productShow.style.display = 'none';
+        if (Object.keys(item).length === 0) {
+            alert("Добавьте товары в корзину.");
+            return;
+        }
+        if (!product.field1 || !product.field2 || !product.field3 || !product.field4) {
+            alert("Поля для доставки обязательны для заполнения.");
+            return;
+        }
+        productShow.style.display = 'none';
         tg.sendData(JSON.stringify(item));
     });
 });
-
