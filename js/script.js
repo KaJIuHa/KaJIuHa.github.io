@@ -94,10 +94,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     Telegram.WebApp.onEvent('mainButtonClicked', function () {
-        if (Object.keys(item).length === 0) {
-            alert("Добавьте товары в корзину.");
-            return;
-        }
         if (!field1.value || !field2.value || !field3.value || !field4.value) {
             alert("Поля для доставки обязательны для заполнения.");
             return;
