@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
         updateCartDisplay();
     }
 
-    Telegram.WebApp.onEvent('mainButtonClicked', callback, function () {
+    Telegram.WebApp.onEvent('mainButtonClicked', function () {
         tg.BackButton.show();
         tg.MainButton.setText('Перейти в корзину');
         cartContainer.removeAttribute("hidden");
