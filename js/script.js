@@ -94,13 +94,13 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Поля для доставки обязательны для заполнения.");
             return;
         }
-        const delivery = {
+        const deliveryInfo = {
             field1: field1.value, // Получение значения поля 1
             field2: field2.value, // Получение значения поля 2
             field3: field3.value, // Получение значения поля 3
             field4: field4.value, // Получение значения поля 4
         }
-        item[delivery] = delivery;
+        item['Delivery'] = deliveryInfo;
         productShow.style.display = 'none';
         tg.sendData(JSON.stringify(item));
     });
