@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let tg = window.Telegram.WebApp;
 
-    tg.expand();
+    // tg.expand();
 
     addToCartButtons.forEach((button, index) => {
         button.addEventListener("click", () => {
