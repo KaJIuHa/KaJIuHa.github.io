@@ -88,7 +88,8 @@ body {
 }
 
 .field-pair input {
-    width: 50%; /* Распределение полей по 2 в ряду */
+    width: 100%; /* Распределение полей по 2 в ряду */
+    height: 50px;
     border: 2px solid black; /* Черная рамка */
     border-radius: 5px; /* Скругленные углы */
     padding: 5px; /* Отступ вокруг текста */
