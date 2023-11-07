@@ -2,11 +2,12 @@ body {
     font-family: Arial, sans-serif;
     background-color: var(--tg-theme-bg-color);
     color: var(--tg-theme-text-color) ;
+    /* width: 320px; */
 }
 
 .products {
     display: grid;
-    /* width: 576px; */
+    /* width: 576px;  */
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
 }
@@ -30,6 +31,8 @@ body {
     border: none;
     cursor: pointer;
     border-radius: 10px;
+    width: 150px; /* Задайте фиксированную ширину */
+    height: 40px; /* Задайте фиксированную высоту */
 }
 
 .cart-quantity {
@@ -59,14 +62,24 @@ body {
 
 .increment,
 .decrement {
-    background-color: black;
-    color: white;
-    padding: 5px 10px;
-    border-style: solid;
-    border-color: aliceblue;
-    border-width: 0.3px ;
+    background-image: linear-gradient(#0dccea, #0d70ea);
+    border: 0;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+    box-sizing: border-box;
+    color: #fff;
     cursor: pointer;
-    border-radius: 8px;
+    font-family: Montserrat,sans-serif;
+    font-size: .9em;
+    margin: 5px;
+    padding: 10px 15px;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    font-weight: 500;
     margin: 0 10px; /* Небольшое расстояние между кнопками */
 }
 
@@ -85,6 +98,7 @@ body {
 .field-pair {
     display: flex;
     margin-bottom: 10px;
+    min-width: 300px;
 }
 
 .field-pair input {
@@ -106,3 +120,67 @@ body {
 .warning{
     text-align: center;
 }
+/* CSS */
+.add-to-cart {
+    appearance: none;
+    backface-visibility: hidden;
+    background-color: #2f80ed;
+    border-radius: 10px;
+    border-style: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    height: 50px;
+    letter-spacing: normal;
+    line-height: 1.5;
+    outline: none;
+    overflow: hidden;
+    padding: 14px 30px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transform: translate3d(0, 0, 0);
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #1366d6;
+    box-shadow: rgba(0, 0, 0, .05) 0 5px 30px, rgba(0, 0, 0, .05) 0 1px 4px;
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: .35s;
+  }
+  
+  .add-to-cart:hover:after {
+    opacity: .5;
+  }
+  
+  .add-to-cart:active {
+    box-shadow: rgba(0, 0, 0, .1) 0 3px 6px 0, rgba(0, 0, 0, .1) 0 0 10px 0, rgba(0, 0, 0, .1) 0 1px 4px -1px;
+    transform: translateY(2px);
+    transition-duration: .35s;
+  }
+  
+  .add-to-cart:active:after {
+    opacity: 1;
+  }
+  
+  @media (min-width: 768px) {
+    .add-to-cart {
+      padding: 14px 22px;
+      width: 176px;
+    }
+  }
+
+
+
