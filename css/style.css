@@ -19,12 +19,17 @@ body {
     position: relative;
     border-radius: 12px;
 }
+/* .price{
+    font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+} */
 
 .product-info {
     margin-bottom: 10px;
 }
 
-.add-to-cart {
+/* .add-to-cart {
     background-color: var(--tg-theme-button-color);
     color: var(--tg-theme-button-text-color);
     padding: 5px 10px;
@@ -32,8 +37,8 @@ body {
     cursor: pointer;
     border-radius: 10px;
     width: 150px; /* Задайте фиксированную ширину */
-    height: 40px; /* Задайте фиксированную высоту */
-}
+    /* height: 40px; Задайте фиксированную высоту */
+/* } */ 
 
 .cart-quantity {
     position: absolute;
@@ -140,7 +145,7 @@ body {
     line-height: 1.5;
     outline: none;
     overflow: hidden;
-/*     padding: 14px 30px; */
+    /* padding: 14px 30px; */
     position: relative;
     text-align: center;
     text-decoration: none;
@@ -181,6 +186,15 @@ body {
       width: 176px;
     }
   }
-
+.field1,
+.field2,
+.field3,
+.field4{
+    font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    height: 50px;
+    letter-spacing: normal;
+}
 
 
