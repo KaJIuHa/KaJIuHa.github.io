@@ -66,6 +66,18 @@ document.addEventListener("DOMContentLoaded", function () {
                     total -= product.price;
                     updateCartItem(product);
                 }
+                else {
+                    // Если товар один в корзине, возвращаем кнопку "Добавить в корзину"
+                    quantityControls.style.display = "none";
+                    cartQuantity.style.display = "none";
+                    button.style.display = "inline";
+                    delete item[productName]; // Удаление товара из массива item
+                    quantityControls.style.removeProperty('display');
+                    cartQuantity.style.removeProperty('display');
+                    cartQuantity.textContent = '0';
+                    cartQuantity.classList.remove("show");
+                    
+                }
             });
         });
     });

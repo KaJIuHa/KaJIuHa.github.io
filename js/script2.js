@@ -4,13 +4,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const cartItems = document.getElementById("cart-items");
     const totalPrice = document.getElementById("total-price");
     const productShow = document.getElementById("products");
+    const field1 = document.querySelector(".field1"); // Поле 1
+    const field2 = document.querySelector(".field2"); // Поле 2
+    const field3 = document.querySelector(".field3"); // Поле 3
+    const field4 = document.querySelector(".field4"); // Поле 4
 
     let item = {}; // Изменение массива на словарь
     let total = 0;
 
     let tg = window.Telegram.WebApp;
 
-    // tg.expand();
+    tg.expand();
 
     addToCartButtons.forEach((button, index) => {
         button.addEventListener("click", () => {
@@ -40,10 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 quantity: 1,
             };
 
-            item[product.name] = product; // Добавление товара в словарь item
+            item[productName] = product; // Добавление товара в словарь item
             total += product.price;
             updateCartDisplay();
-            // cartContainer.removeAttribute("hidden");
             tg.MainButton.setText('Перейти в корзину');
             tg.MainButton.show();
 
@@ -62,6 +65,18 @@ document.addEventListener("DOMContentLoaded", function () {
                     cartQuantity.textContent = product.quantity;
                     total -= product.price;
                     updateCartItem(product);
+                }
+                else {
+                    // Если товар один в корзине, возвращаем кнопку "Добавить в корзину"
+                    quantityControls.style.display = "none";
+                    cartQuantity.style.display = "none";
+                    button.style.display = "inline";
+                    delete item[productName]; // Удаление товара из массива item
+                    quantityControls.style.removeProperty('display');
+                    cartQuantity.style.removeProperty('display');
+                    cartQuantity.textContent = '0';
+                    cartQuantity.classList.remove("show");
+                    
                 }
             });
         });
@@ -87,11 +102,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     Telegram.WebApp.onEvent('mainButtonClicked', function () {
-        // tg.BackButton.show();
-        // tg.MainButton.setText('Перейти в корзину');
-        // cartContainer.removeAttribute("hidden");
-        // // tg.MainButton.setText('Перейти к оформлению');
-        // productShow.style.display = 'none';
+        if (!field1.value || !field2.value || !field3.value || !field4.value) {
+            alert("Поля для доставки обязательны для заполнения.");
+            return;
+        }
+        const deliveryInfo = {
+            field1: field1.value, // Получение значения поля 1
+            field2: field2.value, // Получение значения поля 2
+            field3: field3.value, // Получение значения поля 3
+            field4: field4.value, // Получение значения поля 4
+        }
+        item['Delivery'] = deliveryInfo;
+        productShow.style.display = 'none';
         tg.sendData(JSON.stringify(item));
     });
 });
